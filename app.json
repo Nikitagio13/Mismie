@@ -1,14 +1,16 @@
 {
   "expo": {
-    "name": "my-project",
+    "name": "Mismie",
     "slug": "my-project",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash1.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#FFF",
+      "width": "50%"
+      
     },
     "updates": {
       "fallbackToCacheTimeout": 0

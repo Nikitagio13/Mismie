@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { useFonts } from 'expo-font';
+import AppLoading from 'expo-app-loading';
+import Navigator from './Routes/gamesStack';
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+     
+
+  let [fontsLoaded] = useFonts({
+    "alk_life": require('./assets/fonts/alk_life.otf'),
+     'alkLife': require('./assets/fonts/alk_life.otf'),
+    "thinGeo": require("./assets/fonts/thingeo.ttf")
+  });
+
+  if (!fontsLoaded) {  
+    return <AppLoading />
+    }
+
+  return(
+      <Navigator />
+     )
+    
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+ 
