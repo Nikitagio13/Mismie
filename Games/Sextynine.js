@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Image, ImageBackground, TouchableWithoutFeedback, TouchableOpacity } from 'react-native';
-
-
+import { randomImages } from '../utilities/Randomizer';
 
 const CardsData = [
   { image: require('../assets/photos/test4.jpg'), id: 1 },
@@ -17,19 +16,13 @@ const CardsData = [
 
 export default function Sextynine() {
 
-  let randomImages = () => {
-    const randomIndex = Math.floor(Math.random() * CardsData.length)
-    return CardsData[randomIndex];
-    
-  }
-
   return (
     <View>
       <ImageBackground source={require('../assets/photos/backgroundcolors.jpg')} style={styles.image} />
       <TouchableOpacity>
         <View style={styles.cardImages}>
 
-          <Image source={randomImages().image} style={styles.cardsFromData} />
+          <Image source={randomImages(CardsData).image} style={styles.cardsFromData} />
         </View>
       </TouchableOpacity>
     </View>
