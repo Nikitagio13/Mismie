@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Image, ImageBackground, TouchableWithoutFeedback, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, Image, ImageBackground, TouchableWithoutFeedback } from 'react-native';
 import { randomImages } from '../utilities/Randomizer';
 
 
@@ -26,7 +26,7 @@ export default function Sextynine() {
   return (
     <View>
       <ImageBackground source={require('../assets/photos/backgroundcolors.jpg')} style={styles.image} />
-      <TouchableWithoutFeedback onPress={() => onPressF(cardsData.image)}>
+      <TouchableWithoutFeedback onPress={() => onPressF(setCardsData.image)}>
         <View style={styles.cardImages}>
 
           <Image source={randomImages(cardsData).image} style={styles.cardsFromData} />
@@ -36,21 +36,6 @@ export default function Sextynine() {
   )
 }
 
-// export default function Sextynine() {
-//   const [currentImageIndex, setCurrentImageIndex] = useState(Math.floor(Math.random() * CardsData.length))
-//   const changeImage = () => {
-//     const randomNumber = 
-//     setCurrentImageIndex(randomNumber);
-//   }
-//   useEffect(() => changeImage(), [])
-
-//   return (
-//     <Image
-//         source={CardsData[currentImageIndex]}
-//         style={styles.imageStyle}
-//     />
-//   )
-// }
 
 const styles = StyleSheet.create({
 
@@ -92,7 +77,7 @@ const styles = StyleSheet.create({
   }
 
 
-}
+   }
 )
 
 

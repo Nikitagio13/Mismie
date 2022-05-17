@@ -83,7 +83,7 @@ export default function ImgData(){
                             <TouchableOpacity style={{backgroundColor: 'rgba(249,249,249, 1)',  marginTop: 25, paddingHorizontal: 35, paddingTop: 6, paddingBottom:10, borderRadius: 50 }}>
                                  <Text style={{ fontSize: 19, color: '#0A84FF',  }}>ყიდვა {item.price}</Text>
                             </TouchableOpacity>
-                            {/* <Image source={require('../assets/photos/swipe.png')} style={{width: 50, height: 50, position:'absolute', bottom: 20, right: 35}}/> */}
+                          
                         </View> 
                 }}
             />
