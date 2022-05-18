@@ -14,9 +14,9 @@ export default function FlatButton({text, onPress}) {
 const styles = StyleSheet.create({
     button: {
         backgroundColor:"#5325",
-        paddingVertical: 11,
+        paddingVertical: 12,
         paddingHorizontal: 30,
-        width: 259,
+        width: 270,
         alignItems: 'center',
         position: 'relative',
         top: 15,
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         color:"#FFC300",
-        fontSize: 24,
+        fontSize: 24.5,
         fontFamily: 'alk_life',
     }
  

@@ -23,18 +23,22 @@ export default function Home({ navigation }) {
     
          return (
             <View style={styles.container}>
+              
             <View style={styles.homePageImages}>
                 <Image source={require('../assets/photos/wine-bottles.png')} style={styles.homePageImage1} />
                 <Image source={require('../assets/photos/R18.png')} style={styles.homePageImage2} />
              </View>
               <>
-                <Text style={styles.title}>მისმიე</Text>
+          
+                <Image source={require("../assets/photos/mismieLogo2.png")} style={{width: 350, height:350, position:'relative', bottom: 120}}/>
+                {/* <Text style={styles.title}>მისმიე</Text> */}
                 <Text style={styles.subtitle}>თრობის ახალი ეპოქა</Text>
                 
+                <View style={{position: "relative", bottom: 160}}>
                     <FlatButton style={styles.button} text="თამაშები" onPress={pressHandlerGames} />
                     <FlatButton style={styles.button} text="ბონუს კარტები" onPress={pressHandlerBonusCards} />
                     <FlatButton style={styles.button} text="ჩვენ შესახებ" onPress={pressHandlerAbout} />
-                    
+                </View>  
                     
                 <StatusBar style="auto" />
              </>
@@ -52,10 +56,10 @@ export default function Home({ navigation }) {
     },
 
     title: {
-      fontSize: 65,
+      fontSize: 70,
       color: "#FFC5EC",
       position: 'relative',
-      bottom: 67,
+      bottom: 100,
       letterSpacing: 7,
       fontFamily: 'alk_life',
 
@@ -63,7 +67,7 @@ export default function Home({ navigation }) {
     subtitle: {
       color: '#FFC5EC',
       position: 'relative',
-      bottom: 61,
+      bottom: 230,
       fontSize:  18,
       fontFamily: 'alk_life',
     },
@@ -73,19 +77,19 @@ export default function Home({ navigation }) {
       justifyContent: 'center',
       alignItems:'center', 
       position: 'relative',
-      top: 430,
+      top: 600,
       
     },
 
     homePageImage1: {
-      width: 70, 
-      height: 70,
+      width: 60, 
+      height: 60,
       marginRight: 30
     },
 
     homePageImage2: {
-      width: 70, 
-      height: 70,
+      width: 60, 
+      height: 60,
     }
 
   }); 

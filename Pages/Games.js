@@ -21,6 +21,10 @@ export default function Games({ navigation }) {
        navigation.navigate("IsevDamisxi")
     }
 
+    const pressHandlerIsevDamisxi = () => {
+        navigation.navigate("IsevDamisxi")
+     }
+
     const pressHandlerBonusCards = () => {
             navigation.navigate('BonusCards')
     }
@@ -32,7 +36,7 @@ return (
                 <View style={styles.container}>
 
                         <TouchableOpacity onPress={pressHandlerSextynine}>
-                                <Image source={require("../assets/photos/69.jpg")} style={styles.gameicon} />
+                                <Image source={require("../assets/photos/69.png")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>სექსთინაინ</Text>
                         </TouchableOpacity>
 
@@ -41,18 +45,18 @@ return (
                                 <Text style={styles.gameName}>დამისხი დამალევინე</Text>
                         </TouchableOpacity>
                         
-                        <TouchableOpacity onPress={pressHandlerKidevDamisxi}>
-                                <Image source={require('../assets/photos/kidevdamisxi.jpg')} style={styles.gameicon} />
-                                <Text style={styles.gameName}>კიდევ დამისხი დამალევინე</Text>
+                        <TouchableOpacity onPress={pressHandlerIsevDamisxi}>
+                                <Image source={require('../assets/photos/isevDamisxi.png')} style={styles.gameicon} />
+                                <Text style={styles.gameName}>ისევ დამისხი</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={pressHandlerMismie}>
-                                <Image source={require("../assets/photos/mismie.jpg")} style={styles.gameicon} />
-                                <Text style={styles.gameName}>მისმიე</Text>
+                                <Image source={require("../assets/photos/igriale.png")} style={styles.gameicon} />
+                                <Text style={styles.gameName}>იგრიალე ოქრო</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={pressHandlerMismie}>
-                                <Image source={require("../assets/photos/mismie.jpg")} style={styles.gameicon} />
+                                <Image source={require("../assets/photos/dampluri.png")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>დამპლური თამაშები</Text>
                         </TouchableOpacity>
 
