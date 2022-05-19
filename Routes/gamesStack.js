@@ -17,7 +17,7 @@ const screens = {
     Home: {
         screen:  Home,
         navigationOptions: {
-                header: () => false,
+                header: (() => false)
         }
     },
     Games: {
@@ -27,7 +27,7 @@ const screens = {
             headerTintColor: 'white',
             title: 'თამაშები',
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
-            headerBackTitle: () => null
+            headerBackTitle: (() => null)
             
         }
     },
@@ -38,7 +38,7 @@ const screens = {
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
             headerTintColor: 'white',
             headerTransparent: true,
-            headerBackTitle: () => null
+            headerBackTitle:(() => null)
         },
     },
     BonusCards: {
@@ -48,7 +48,7 @@ const screens = {
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
             headerTintColor: 'white',
             headerTransparent: true,
-            headerBackTitle: () => null
+            headerBackTitle: (() => null)
         }
     },
 
@@ -59,7 +59,7 @@ const screens = {
             headerTransparent: true,
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
             headerTintColor: 'white',
-            headerBackTitle: () => null
+            headerBackTitle: (() => null)
         }
     },
 
@@ -69,7 +69,7 @@ const screens = {
             title: 'დამისხი დამალევინე',
             headerTransparent: true,
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 20, letterSpacing: 1},
-            headerBackTitle: () => null
+            headerBackTitle: (() => null)
         }
     },
 
@@ -79,7 +79,7 @@ const screens = {
             title: 'დამპლური თამაშები',
             headerTransparent: true,
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 20, letterSpacing: 1},
-            headerBackTitle: () => null
+            headerBackTitle: (() => null)
         }
     },
 
@@ -89,7 +89,7 @@ const screens = {
             title: 'კიდევ დამისხი',
             headerTransparent: true,
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 20, letterSpacing: 1, textAlign: 'center'},
-            headerBackTitle: () => null
+            headerBackTitle: (() => null)
         }
     },
 
@@ -99,7 +99,7 @@ const screens = {
             title: 'ისევ დამისხი',
             headerTransparent: true,
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 20, letterSpacing: 1},
-            headerBackTitle: () => null
+            headerBackTitle: (() => null)
         }
     },
 
@@ -109,7 +109,7 @@ const screens = {
             title: 'ისევ დამისხი დამალევინე',
             headerTransparent: true,
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
-            headerBackTitle: () => null
+            headerBackTitle: (() => null)
         }
     },
 }

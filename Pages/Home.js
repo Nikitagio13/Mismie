@@ -35,9 +35,9 @@ export default function Home({ navigation }) {
                 <Text style={styles.subtitle}>თრობის ახალი ეპოქა</Text>
                 
                 <View style={{position: "relative", bottom: 160}}>
-                    <FlatButton style={styles.button} text="თამაშები" onPress={pressHandlerGames} />
-                    <FlatButton style={styles.button} text="ბონუს კარტები" onPress={pressHandlerBonusCards} />
-                    <FlatButton style={styles.button} text="ჩვენ შესახებ" onPress={pressHandlerAbout} />
+                    <FlatButton style={styles.button} text="თამაშები" onPress={() => pressHandlerGames ()} />
+                    <FlatButton style={styles.button} text="ბონუს კარტები" onPress={() => pressHandlerBonusCards()} />
+                    <FlatButton style={styles.button} text="ჩვენ შესახებ" onPress={() => pressHandlerAbout()} />
                 </View>  
                     
                 <StatusBar style="auto" />
@@ -54,16 +54,14 @@ export default function Home({ navigation }) {
       alignItems: 'center',
       justifyContent: 'center',
     },
-
-    title: {
-      fontSize: 70,
-      color: "#FFC5EC",
-      position: 'relative',
-      bottom: 100,
-      letterSpacing: 7,
-      fontFamily: 'alk_life',
-
-    },
+    // title: {
+    //   fontSize: 70,
+    //   color: "#FFC5EC",
+    //   position: 'relative',
+    //   bottom: 100,
+    //   letterSpacing: 7,
+    //   fontFamily: 'alk_life',
+    // },
     subtitle: {
       color: '#FFC5EC',
       position: 'relative',
@@ -78,15 +76,12 @@ export default function Home({ navigation }) {
       alignItems:'center', 
       position: 'relative',
       top: 600,
-      
     },
-
     homePageImage1: {
       width: 60, 
       height: 60,
       marginRight: 30
     },
-
     homePageImage2: {
       width: 60, 
       height: 60,

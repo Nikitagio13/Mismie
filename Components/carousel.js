@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StatusBar, Image, Animated, Text, View, Dimensions, StyleSheet, TouchableOpacity } from 'react-native';
-const { width, height } = Dimensions.get('screen');
+const { width } = Dimensions.get('screen');
 
 const data = [
     {image: require('../assets/photos/test4.jpg'), title: 'დამისხი დამალევინე', price: '15 ₾'},
@@ -81,7 +81,7 @@ export default function ImgData(){
 
                             <Text style={{color: "#FFF", fontSize: 25, marginTop: 40, fontFamily: 'thinGeo', maxWidth: '93%', textAlign: 'center'}}>{item.title}</Text>
                             <TouchableOpacity style={{backgroundColor: 'rgba(249,249,249, 1)',  marginTop: 25, paddingHorizontal: 35, paddingTop: 6, paddingBottom:10, borderRadius: 50 }}>
-                                 <Text style={{ fontSize: 19, color: '#0A84FF',  }}>ყიდვა {item.price}</Text>
+                                 <Text style={{ fontSize: 19, color: '#0A84FF',  }}> ყიდვა {item.price}</Text>
                             </TouchableOpacity>
                           
                         </View> 

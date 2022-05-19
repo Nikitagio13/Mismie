@@ -1,6 +1,10 @@
 import React  from 'react'
 import { StyleSheet, View, TouchableOpacity, Image, Text, ScrollView } from 'react-native';
+import ExpoFastImage from 'expo-fast-image'
+import CacheImage from '../Components/cacheImage';
+import image69 from "../assets/photos/69.png"
 
+const image69Uri = Image.resolveAssetSource(image69).uri
 
 export default function Games({ navigation }) {
 
@@ -28,6 +32,17 @@ export default function Games({ navigation }) {
     const pressHandlerBonusCards = () => {
             navigation.navigate('BonusCards')
     }
+
+    const pressHandlerIgriale = () => {
+        navigation.navigate('Igriale')
+}
+
+const pressHandlerDampluri = () => {
+        navigation.navigate('Dampluri')
+}
+
+
+
       
 
 return (
@@ -35,40 +50,45 @@ return (
             <ScrollView style={styles.scrollview}>
                 <View style={styles.container}>
 
-                        <TouchableOpacity onPress={pressHandlerSextynine}>
-                                <Image source={require("../assets/photos/69.png")} style={styles.gameicon} />
+                        <TouchableOpacity onPress={() => pressHandlerSextynine()}>
+                                {/* <ExpoFastImage uri={iconImages.img} cacheKey={id} style={styles.gameicon} /> */}
+                                <CacheImage
+                                        style={styles.gameicon}
+                                        id={2}
+                                        source={{uri: image69}} />
+                                        
                                 <Text style={styles.gameName}>სექსთინაინ</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={pressHandlerDamisxi}>
-                                <Image source={require("../assets/photos/damisxi1.jpg")} style={styles.gameicon} />
+                        <TouchableOpacity onPress={() => pressHandlerDamisxi()}>
+                                <ExpoFastImage source={require("../assets/photos/damisxi1.jpg")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>დამისხი დამალევინე</Text>
                         </TouchableOpacity>
                         
-                        <TouchableOpacity onPress={pressHandlerIsevDamisxi}>
-                                <Image source={require('../assets/photos/isevDamisxi.png')} style={styles.gameicon} />
+                        <TouchableOpacity onPress={() => pressHandlerIsevDamisxi()}>
+                                <ExpoFastImage source={require('../assets/photos/isevDamisxi.png')} style={styles.gameicon} />
                                 <Text style={styles.gameName}>ისევ დამისხი</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={pressHandlerMismie}>
-                                <Image source={require("../assets/photos/igriale.png")} style={styles.gameicon} />
+                        <TouchableOpacity onPress={() => pressHandlerIgriale()}>
+                                <ExpoFastImage source={require("../assets/photos/igriale.png")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>იგრიალე ოქრო</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={pressHandlerMismie}>
-                                <Image source={require("../assets/photos/dampluri.png")} style={styles.gameicon} />
+                        <TouchableOpacity onPress={() => pressHandlerDampluri()}>
+                                <ExpoFastImage source={require("../assets/photos/dampluri.png")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>დამპლური თამაშები</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={pressHandlerMismie}>
-                                <Image source={require("../assets/photos/mismie.jpg")} style={styles.gameicon} />
-                                <Text style={styles.gameName}>რამე ახალი</Text>
+                        <TouchableOpacity onPress={() => pressHandlerKidevDamisxi()}>
+                                <ExpoFastImage source={require("../assets/photos/mismie.jpg")} style={styles.gameicon} />
+                                <Text style={styles.gameName}>კიდევ დამისხი</Text>
                         </TouchableOpacity>
 
 
                 </View>
                         <View style={styles.bonusCardsWrap}>
-                                <TouchableOpacity style={styles.bonusCardsTouchable} onPress={pressHandlerBonusCards}>
+                                <TouchableOpacity style={styles.bonusCardsTouchable} onPress={() => pressHandlerBonusCards()}>
                                         <Image style={styles.bonusCards} source={require("../assets/photos/playingcards2.png")} />
                                         <Text style={styles.bonusCardsTxt}>ბონუს კარტები</Text>
                                 </TouchableOpacity>
