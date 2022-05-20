@@ -1,11 +1,12 @@
 import React  from 'react'
-import { StyleSheet, View, TouchableOpacity, Image, Text, ScrollView } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Text, ScrollView } from 'react-native';
 import ExpoFastImage from 'expo-fast-image'
-import CacheImage from '../Components/cacheImage';
-import image69 from "../assets/photos/69.png"
+import { Image } from "react-native-expo-image-cache"
+import sextynineImage from "../assets/photos/69.png"
 
-const image69Uri = Image.resolveAssetSource(image69).uri
 
+
+const imageURL = sextynineImage
 export default function Games({ navigation }) {
 
 
@@ -52,10 +53,7 @@ return (
 
                         <TouchableOpacity onPress={() => pressHandlerSextynine()}>
                                 {/* <ExpoFastImage uri={iconImages.img} cacheKey={id} style={styles.gameicon} /> */}
-                                <CacheImage
-                                        style={styles.gameicon}
-                                        id={2}
-                                        source={{uri: image69}} />
+                                <Image style={styles.gameicon} uri={imageURL} />
                                         
                                 <Text style={styles.gameName}>სექსთინაინ</Text>
                         </TouchableOpacity>
