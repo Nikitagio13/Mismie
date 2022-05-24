@@ -1,24 +1,23 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import  FlatButton  from '../Components/button';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+
 
 
 export default function Home({ navigation }) {
 
   
-
   const pressHandlerGames = () => {
       navigation.navigate("Games")
-  }
+  };
 
   const pressHandlerAbout = () => {
       navigation.navigate("About")
-  }
+  };
 
   const pressHandlerBonusCards = () => {
     navigation.navigate("BonusCards")
-}
+};
 
     
          return (
@@ -27,6 +26,7 @@ export default function Home({ navigation }) {
             <View style={styles.homePageImages}>
                 <Image source={require('../assets/photos/wine-bottles.png')} style={styles.homePageImage1} />
                 <Image source={require('../assets/photos/R18.png')} style={styles.homePageImage2} />
+                
              </View>
               <>
           
@@ -35,9 +35,9 @@ export default function Home({ navigation }) {
                 <Text style={styles.subtitle}>თრობის ახალი ეპოქა</Text>
                 
                 <View style={{position: "relative", bottom: 160}}>
-                    <FlatButton style={styles.button} text="თამაშები" onPress={() => pressHandlerGames ()} />
-                    <FlatButton style={styles.button} text="ბონუს კარტები" onPress={() => pressHandlerBonusCards()} />
-                    <FlatButton style={styles.button} text="ჩვენ შესახებ" onPress={() => pressHandlerAbout()} />
+                    <TouchableOpacity style={styles.button}  onPress={() => pressHandlerGames()}><Text style={styles.buttonText}>თამაშები</Text></TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={() => pressHandlerBonusCards()}><Text style={styles.buttonText}>ბონუს კარტები</Text></TouchableOpacity>
+                    <TouchableOpacity style={styles.button}  onPress={() => pressHandlerAbout()}><Text style={styles.buttonText}>ჩვენ შესახებ</Text></TouchableOpacity>
                 </View>  
                     
                 <StatusBar style="auto" />
@@ -46,6 +46,7 @@ export default function Home({ navigation }) {
 
     );
   }
+  
   
   const styles = StyleSheet.create({
     container: {
@@ -85,7 +86,23 @@ export default function Home({ navigation }) {
     homePageImage2: {
       width: 60, 
       height: 60,
-    }
+    },
+    button: {
+      backgroundColor:"#5325",
+      paddingVertical: 12,
+      paddingHorizontal: 30,
+      width: 270,
+      alignItems: 'center',
+      position: 'relative',
+      top: 15,
+      marginTop: 16,
+      borderRadius:30,
+  },
+    buttonText: {
+      color:"#FFC300",
+      fontSize: 24.5,
+      fontFamily: 'alk_life',
+  }
 
   }); 
 

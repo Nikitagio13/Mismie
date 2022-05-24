@@ -4,11 +4,11 @@
     "slug": "my-project",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon2.png",
     "splash": {
-      "image": "./assets/splash1.png",
+      "image": "./assets/splash4.png",
       "resizeMode": "contain",
-      "backgroundColor": "#FFF",
+      "backgroundColor": "#CE63AB",
       "width": "50%"
       
     },
