@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { View, Image, ImageBackground, TouchableWithoutFeedback } from 'react-native';
+import { View, Image, ImageBackground, TouchableOpacity, StyleSheet } from 'react-native';
 import { randomImages } from '../utilities/Randomizer';
 import { styles } from '../Components/stylesForCards';
 
-export default function Damisxi() {
+export default function  Igriale() {
 
   const [cardsData, setCardsData] = useState([
     { image: require('../assets/photos/test4.jpg'), id: 1 },
@@ -26,12 +26,39 @@ export default function Damisxi() {
   return (
     <View>
       <ImageBackground source={require('../assets/photos/backgroundcolors.jpg')} style={styles.image} />
-      <TouchableWithoutFeedback onPress={() => onPressF(setCardsData.image)}>
         <View style={styles.cardImages}>
-
           <Image source={randomImages(cardsData).image} style={styles.cardsFromData} />
         </View>
-      </TouchableWithoutFeedback>
+      
+        <View style={style.viewBtn}> 
+          <TouchableOpacity onPress={() => onPressF(setCardsData.image)} > 
+              <Image source={require('../assets/photos/forbidden.png')} style={style.forbiddenBtn}/>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => onPressF(setCardsData.image)}>
+              <Image source={require('../assets/photos/beer.png')} style={style.beerBtn}/>
+          </TouchableOpacity>
+      </View> 
     </View>
   )
 }
+
+
+
+const style = StyleSheet.create({
+  viewBtn: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignContent: "center",
+    marginTop: 30
+  },
+  beerBtn: {
+    height: 85,
+    width: 85,
+  },
+  forbiddenBtn: {
+    height: 85,
+    width: 85,
+  }
+})

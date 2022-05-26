@@ -26,12 +26,10 @@ export default function Home({ navigation }) {
             <View style={styles.homePageImages}>
                 <Image source={require('../assets/photos/wine-bottles.png')} style={styles.homePageImage1} />
                 <Image source={require('../assets/photos/R18.png')} style={styles.homePageImage2} />
-                
              </View>
+
               <>
-          
                 <Image source={require("../assets/photos/mismieLogo2.png")} style={{width: 350, height:350, position:'relative', bottom: 120}}/>
-                {/* <Text style={styles.title}>მისმიე</Text> */}
                 <Text style={styles.subtitle}>თრობის ახალი ეპოქა</Text>
                 
                 <View style={{position: "relative", bottom: 160}}>
@@ -97,11 +95,13 @@ export default function Home({ navigation }) {
       top: 15,
       marginTop: 16,
       borderRadius:30,
+      
   },
     buttonText: {
       color:"#FFC300",
       fontSize: 24.5,
       fontFamily: 'alk_life',
+      textAlign: "center"
   }
 
   }); 

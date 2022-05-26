@@ -1,5 +1,5 @@
 import { createStackNavigator } from "react-navigation-stack";
-import { createAppContainer } from 'react-navigation';
+import { createAppContainer, StackRouter } from 'react-navigation';
 import Home from "../Pages/Home";
 import Games from '../Pages/Games';
 import About from "../Pages/About";
@@ -10,7 +10,25 @@ import Dampluri from '../Games/Dampluri';
 import IsevDamisxi from '../Games/IsevDamisxi';
 import KidevDamisxi from '../Games/KidevDamisxi';
 import Igriale from "../Games/Igriale";
+import SextynineRules from "../RulesPages/SextynineR";
+import DamisxiRules from "../RulesPages/DamisxiR";
+import KidevDamisxiRules from "../RulesPages/KidevDamisxiR";
+import IsevDamisxiRules from "../RulesPages/IsevDamisxiR";
+import DampluriRules from "../RulesPages/DampluriR";
+import IgrialeRules from "../RulesPages/IgrialeR";
 
+
+// const config = {
+//     animation: 'spring',
+//     config: {
+//       stiffness: 1000,
+//       damping: 500,
+//       mass: 3,
+//       overshootClamping: true,
+//       restDisplacementThreshold: 0.01,
+//       restSpeedThreshold: 0.01,
+//     },
+//   };
 
 
 const screens = {
@@ -26,7 +44,7 @@ const screens = {
             headerTransparent: true,
             headerTintColor: 'white',
             title: 'თამაშები',
-            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 28, letterSpacing: 1},
             headerBackTitle: (() => null)
             
         }
@@ -35,7 +53,7 @@ const screens = {
         screen: About,
         navigationOptions: {
             title: "ჩვენს შესახებ",
-            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 28, letterSpacing: 1},
             headerTintColor: 'white',
             headerTransparent: true,
             headerBackTitle:(() => null)
@@ -45,7 +63,7 @@ const screens = {
         screen: BonusCards,
         navigationOptions: {
             title: 'ბონუს კარტები',
-            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 28, letterSpacing: 1},
             headerTintColor: 'white',
             headerTransparent: true,
             headerBackTitle: (() => null)
@@ -59,7 +77,9 @@ const screens = {
             headerTransparent: true,
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
             headerTintColor: 'white',
-            headerBackTitle: (() => null)
+        
+            headerBackTitle: (() => null),
+           
         }
     },
 
@@ -68,6 +88,7 @@ const screens = {
         navigationOptions: {
             title: 'დამისხი დამალევინე',
             headerTransparent: true,
+            headerTintColor: 'white',
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 20, letterSpacing: 1},
             headerBackTitle: (() => null)
         }
@@ -78,6 +99,7 @@ const screens = {
         navigationOptions: {
             title: 'დამპლური თამაშები',
             headerTransparent: true,
+            headerTintColor: 'white',
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 20, letterSpacing: 1},
             headerBackTitle: (() => null)
         }
@@ -88,7 +110,8 @@ const screens = {
         navigationOptions: {
             title: 'კიდევ დამისხი',
             headerTransparent: true,
-            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 20, letterSpacing: 1, textAlign: 'center'},
+            headerTintColor: 'white',
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1, textAlign: 'center'},
             headerBackTitle: (() => null)
         }
     },
@@ -98,7 +121,8 @@ const screens = {
         navigationOptions: {
             title: 'ისევ დამისხი',
             headerTransparent: true,
-            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 20, letterSpacing: 1},
+            headerTintColor: 'white',
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
             headerBackTitle: (() => null)
         }
     },
@@ -106,12 +130,74 @@ const screens = {
     Igriale: {
         screen: Igriale,
         navigationOptions: {
-            title: 'ისევ დამისხი დამალევინე',
+            title: 'იგრიალე ოქრო',
             headerTransparent: true,
+            headerTintColor: 'white',
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
             headerBackTitle: (() => null)
         }
     },
+    SextynineRules: {
+        screen: SextynineRules,
+        navigationOptions: {
+            title: 'წესები:',
+            headerTransparent: true,
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 30, letterSpacing: 1, marginTop: 21.5},
+            headerTintColor: 'white',
+            headerBackTitle: (() => null)
+        }
+    },
+    DamisxiRules: {
+        screen: DamisxiRules,
+        navigationOptions: {
+            title: 'წესები:',
+            headerTransparent: true,
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 30, letterSpacing: 1, marginTop: 21.5},
+            headerTintColor: 'white',
+            headerBackTitle: (() => null)
+        }
+    },
+    DampluriRules: {
+        screen: DampluriRules,
+        navigationOptions: {
+            title: 'წესები:',
+            headerTransparent: true,
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 30, letterSpacing: 1, marginTop: 21.5},
+            headerTintColor: 'white',
+            headerBackTitle: (() => null)
+        }
+    },
+    KidevDamisxiRules: {
+        screen: KidevDamisxiRules,
+        navigationOptions: {
+            title: 'წესები:',
+            headerTransparent: true,
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 30, letterSpacing: 1, marginTop: 21.5},
+            headerTintColor: 'white',
+            headerBackTitle: (() => null)
+        }
+    },
+    IsevDamisxiRules: {
+        screen: IsevDamisxiRules,
+        navigationOptions: {
+            title: 'წესები:',
+            headerTransparent: true,
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 30, letterSpacing: 1, marginTop: 21.5},
+            headerTintColor: 'white',
+            headerBackTitle: (() => null)
+        }
+    },
+   IgrialeRules: {
+        screen:IgrialeRules,
+        navigationOptions: {
+            title: 'წესები:',
+            headerTransparent: true,
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 30, letterSpacing: 1, marginTop:21.5},
+            headerTintColor: 'white',
+            headerBackTitle: (() => null)
+        }
+    },
+
 }
 
 

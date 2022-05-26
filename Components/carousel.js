@@ -81,7 +81,7 @@ export default function ImgData(){
 
                             <Text style={{color: "#FFF", fontSize: 25, marginTop: 40, fontFamily: 'thinGeo', maxWidth: '93%', textAlign: 'center'}}>{item.title}</Text>
                             <TouchableOpacity style={{backgroundColor: 'rgba(249,249,249, 1)',  marginTop: 25, paddingHorizontal: 35, paddingTop: 6, paddingBottom:10, borderRadius: 50 }}>
-                                 <Text style={{ fontSize: 19, color: '#0A84FF',  }}> ყიდვა {item.price}</Text>
+                                 <Text style={{ fontSize: 19, color: '#0A84FF',  }}> გახსენი {item.price}</Text>
                             </TouchableOpacity>
                           
                         </View> 

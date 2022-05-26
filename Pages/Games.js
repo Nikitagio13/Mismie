@@ -17,7 +17,7 @@ export default function Games({ navigation }) {
       navigation.navigate("KidevDamisxi")
     };
 
-     const pressHandlerMismie = () => {
+    const pressHandlerMismie = () => {
        navigation.navigate("IsevDamisxi")
     };
 
@@ -26,15 +26,38 @@ export default function Games({ navigation }) {
      };
 
     const pressHandlerBonusCards = () => {
-            navigation.navigate('BonusCards')
+        navigation.navigate('BonusCards')
     };
 
     const pressHandlerIgriale = () => {
         navigation.navigate('Igriale')
 };
-
-const pressHandlerDampluri = () => {
+    const pressHandlerDampluri = () => {
         navigation.navigate('Dampluri')
+};
+
+     const pressHandlerSextynineRules = () => {
+        navigation.navigate('SextynineRules')
+};
+
+     const pressHandlerDamisxiRules = () => {
+        navigation.navigate('DamisxiRules')
+};
+
+     const pressHandlerKidevDamisxiRules = () => {
+        navigation.navigate('KidevDamisxiRules')
+};
+
+     const pressHandlerIsevDamisxiRules = () => {
+        navigation.navigate('IsevDamisxiRules')
+};
+
+     const pressHandlerDampluriRules = () => {
+        navigation.navigate('DampluriRules')
+};
+
+     const pressHandlerIgrialeRules = () => {
+        navigation.navigate('IgrialeRules')
 };
 
 
@@ -46,34 +69,32 @@ return (
             <ScrollView style={styles.scrollview}>
                 <View style={styles.container}>
 
-                        <TouchableOpacity onPress={() => pressHandlerSextynine()}>
+                        <TouchableOpacity onPress={() => pressHandlerSextynineRules()}>
                                 <Image source={require("../assets/photos/69.png")} style={styles.gameicon} />
-                                {/* <Image style={styles.gameicon} uri={imageURL} /> */}
-                                        
                                 <Text style={styles.gameName}>სექსთინაინ</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => pressHandlerDamisxi()}>
+                        <TouchableOpacity onPress={() => pressHandlerDamisxiRules()}>
                                 <Image source={require("../assets/photos/damisxi1.jpg")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>დამისხი დამალევინე</Text>
                         </TouchableOpacity>
                         
-                        <TouchableOpacity onPress={() => pressHandlerIsevDamisxi()}>
+                        <TouchableOpacity onPress={() => pressHandlerIsevDamisxiRules()}>
                                 <Image source={require('../assets/photos/isevDamisxi.png')} style={styles.gameicon} />
                                 <Text style={styles.gameName}>ისევ დამისხი</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => pressHandlerIgriale()}>
+                        <TouchableOpacity onPress={() => pressHandlerIgrialeRules()}>
                                 <Image source={require("../assets/photos/igriale.png")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>იგრიალე ოქრო</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => pressHandlerDampluri()}>
+                        <TouchableOpacity onPress={() => pressHandlerDampluriRules()}>
                                 <Image source={require("../assets/photos/dampluri.png")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>დამპლური თამაშები</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => pressHandlerKidevDamisxi()}>
+                        <TouchableOpacity onPress={() => pressHandlerKidevDamisxiRules()}>
                                 <Image source={require("../assets/photos/mismie.jpg")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>კიდევ დამისხი</Text>
                         </TouchableOpacity>
@@ -121,9 +142,9 @@ const styles = StyleSheet.create({
       fontFamily: 'alk_life',
       fontSize: 21,
       position: 'absolute',
-      right: -5,
+      right: -20,
       top: 130,
-      width: 130,
+      width: 160,
       color: '#72000F',
       textAlign: 'center',
   },

@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
         height: 0,
       },
       shadowRadius: 12,
-      marginTop: 80,
+      marginTop: 110
     },
   
     card: {
@@ -36,8 +36,9 @@ export const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       width: "85%",
-      height: "96%",
-     borderRadius: 10,
+      height: 550,
+      borderRadius: 10,
+      
     }
   
   

@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         },
         gamestext: {
             color: 'white',
-            
+            textAlign: "justify"
             
         }
     }
