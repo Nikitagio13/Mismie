@@ -1,40 +1,9 @@
 import React  from 'react'
 import { Image, StyleSheet, View, TouchableOpacity, Text, ScrollView } from 'react-native';
-
+import * as Haptics from 'expo-haptics';
 
 export default function Games({ navigation }) {
 
-
-  const pressHandlerSextynine = () => {
-    navigation.navigate("Sextynine")
-  };
-
-  const pressHandlerDamisxi = () => {
-     navigation.navigate("Damisxi")
-   };
-
-   const pressHandlerKidevDamisxi = () => {
-      navigation.navigate("KidevDamisxi")
-    };
-
-    const pressHandlerMismie = () => {
-       navigation.navigate("IsevDamisxi")
-    };
-
-    const pressHandlerIsevDamisxi = () => {
-        navigation.navigate("IsevDamisxi")
-     };
-
-    const pressHandlerBonusCards = () => {
-        navigation.navigate('BonusCards')
-    };
-
-    const pressHandlerIgriale = () => {
-        navigation.navigate('Igriale')
-};
-    const pressHandlerDampluri = () => {
-        navigation.navigate('Dampluri')
-};
 
      const pressHandlerSextynineRules = () => {
         navigation.navigate('SextynineRules')
@@ -60,7 +29,14 @@ export default function Games({ navigation }) {
         navigation.navigate('IgrialeRules')
 };
 
+const pressHandlerBonusCards = () => {
+        navigation.navigate('BonusCards')
+};
 
+
+const hapticsM = () => {
+        Haptics.selectionAsync()
+}
 
       
 
@@ -69,32 +45,32 @@ return (
             <ScrollView style={styles.scrollview}>
                 <View style={styles.container}>
 
-                        <TouchableOpacity onPress={() => pressHandlerSextynineRules()}>
+                        <TouchableOpacity onPress={() => {pressHandlerSextynineRules(); hapticsM()}}>
                                 <Image source={require("../assets/photos/69.png")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>სექსთინაინ</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => pressHandlerDamisxiRules()}>
+                        <TouchableOpacity onPress={() => {pressHandlerDamisxiRules(); hapticsM()}}>
                                 <Image source={require("../assets/photos/damisxi1.jpg")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>დამისხი დამალევინე</Text>
                         </TouchableOpacity>
                         
-                        <TouchableOpacity onPress={() => pressHandlerIsevDamisxiRules()}>
+                        <TouchableOpacity onPress={() => {pressHandlerIsevDamisxiRules(); hapticsM()}}>
                                 <Image source={require('../assets/photos/isevDamisxi.png')} style={styles.gameicon} />
                                 <Text style={styles.gameName}>ისევ დამისხი</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => pressHandlerIgrialeRules()}>
+                        <TouchableOpacity onPress={() => {pressHandlerIgrialeRules(); hapticsM()}}>
                                 <Image source={require("../assets/photos/igriale.png")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>იგრიალე ოქრო</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => pressHandlerDampluriRules()}>
+                        <TouchableOpacity onPress={() => {pressHandlerDampluriRules(); hapticsM()}}>
                                 <Image source={require("../assets/photos/dampluri.png")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>დამპლური თამაშები</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => pressHandlerKidevDamisxiRules()}>
+                        <TouchableOpacity onPress={() =>{pressHandlerKidevDamisxiRules(); hapticsM()}}>
                                 <Image source={require("../assets/photos/mismie.jpg")} style={styles.gameicon} />
                                 <Text style={styles.gameName}>კიდევ დამისხი</Text>
                         </TouchableOpacity>
@@ -102,7 +78,7 @@ return (
 
                 </View>
                         <View style={styles.bonusCardsWrap}>
-                                <TouchableOpacity style={styles.bonusCardsTouchable} onPress={() => pressHandlerBonusCards()}>
+                                <TouchableOpacity style={styles.bonusCardsTouchable} onPress={() => {pressHandlerBonusCards(); hapticsM()}}>
                                         <Image style={styles.bonusCards} source={require("../assets/photos/playingcards2.png")} />
                                         <Text style={styles.bonusCardsTxt}>ბონუს კარტები</Text>
                                 </TouchableOpacity>

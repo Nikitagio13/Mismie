@@ -1,5 +1,5 @@
 import { createStackNavigator } from "react-navigation-stack";
-import { createAppContainer, StackRouter } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
 import Home from "../Pages/Home";
 import Games from '../Pages/Games';
 import About from "../Pages/About";
@@ -18,17 +18,6 @@ import DampluriRules from "../RulesPages/DampluriR";
 import IgrialeRules from "../RulesPages/IgrialeR";
 
 
-// const config = {
-//     animation: 'spring',
-//     config: {
-//       stiffness: 1000,
-//       damping: 500,
-//       mass: 3,
-//       overshootClamping: true,
-//       restDisplacementThreshold: 0.01,
-//       restSpeedThreshold: 0.01,
-//     },
-//   };
 
 
 const screens = {
@@ -37,6 +26,7 @@ const screens = {
         navigationOptions: {
                 header: (() => false)
         }
+        
     },
     Games: {
         screen: Games,
@@ -144,7 +134,10 @@ const screens = {
             headerTransparent: true,
             headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 30, letterSpacing: 1, marginTop: 21.5},
             headerTintColor: 'white',
-            headerBackTitle: (() => null)
+            headerBackTitle: (() => null),
+            transitionConfig: ()=> {
+                return {screenInterpolator: CardStackStyleInterpolator.forHorizontal}
+                }
         }
     },
     DamisxiRules: {
@@ -202,6 +195,5 @@ const screens = {
 
 
 
-const GamesStack = createStackNavigator(screens);
-
+const GamesStack = createStackNavigator(screens)
 export default createAppContainer(GamesStack);

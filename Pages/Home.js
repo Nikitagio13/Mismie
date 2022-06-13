@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-
+import * as Haptics from 'expo-haptics';
 
 
 export default function Home({ navigation }) {
@@ -19,6 +19,12 @@ export default function Home({ navigation }) {
     navigation.navigate("BonusCards")
 };
 
+
+const hapticL = () => {
+  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)
+}
+
+
     
          return (
             <View style={styles.container}>
@@ -33,9 +39,9 @@ export default function Home({ navigation }) {
                 <Text style={styles.subtitle}>თრობის ახალი ეპოქა</Text>
                 
                 <View style={{position: "relative", bottom: 160}}>
-                    <TouchableOpacity style={styles.button}  onPress={() => pressHandlerGames()}><Text style={styles.buttonText}>თამაშები</Text></TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={() => pressHandlerBonusCards()}><Text style={styles.buttonText}>ბონუს კარტები</Text></TouchableOpacity>
-                    <TouchableOpacity style={styles.button}  onPress={() => pressHandlerAbout()}><Text style={styles.buttonText}>ჩვენ შესახებ</Text></TouchableOpacity>
+                    <TouchableOpacity style={styles.button}  onPress={() => {pressHandlerGames(); hapticL()}}><Text style={styles.buttonText}>თამაშები</Text></TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={() => {pressHandlerBonusCards(); hapticL()}}><Text style={styles.buttonText}>ბონუს კარტები</Text></TouchableOpacity>
+                    <TouchableOpacity style={styles.button}  onPress={() => {pressHandlerAbout(); hapticL()}}><Text style={styles.buttonText}>ჩვენ შესახებ</Text></TouchableOpacity>
                 </View>  
                     
                 <StatusBar style="auto" />

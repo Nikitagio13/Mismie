@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, Image, ImageBackground, TouchableOpacity, StyleSheet } from 'react-native';
 import { randomImages } from '../utilities/Randomizer';
 import { styles } from '../Components/stylesForCards';
+import * as Haptics from 'expo-haptics';
+
 
 export default function  Igriale() {
 
@@ -20,7 +22,14 @@ export default function  Igriale() {
       
       return prevImage.filter(img => img.image != image);
     })
-    
+  }
+
+  const  hapticSuccess = () => {
+    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success)
+  }
+
+  const  hapticError = () => {
+    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error)
   }
 
   return (
@@ -31,11 +40,11 @@ export default function  Igriale() {
         </View>
       
         <View style={style.viewBtn}> 
-          <TouchableOpacity onPress={() => onPressF(setCardsData.image)} > 
+          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticError()}} > 
               <Image source={require('../assets/photos/forbidden.png')} style={style.forbiddenBtn}/>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => onPressF(setCardsData.image)}>
+          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticSuccess()}}>
               <Image source={require('../assets/photos/beer.png')} style={style.beerBtn}/>
           </TouchableOpacity>
       </View> 

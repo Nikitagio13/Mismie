@@ -1,11 +1,17 @@
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import * as Haptics from 'expo-haptics';
+
 
 export default function KidevDamisxiRules({ navigation }) {
 
     const pressHandlerKidevDamisxiR = () => {
         navigation.navigate("KidevDamisxi")
     };
+
+    const hapticForStart = () => {
+        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy)
+    }
 
   return (
 
@@ -24,7 +30,7 @@ export default function KidevDamisxiRules({ navigation }) {
                         Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
                         vel illum qui dolorem eum fugiat quo voluptas nulla pariatur! DDD
                 </Text>
-                <TouchableOpacity style={styles.button} onPress={() => pressHandlerKidevDamisxiR()}><Text style={styles.buttonText}>თამაშის დაწყება</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.button} onPress={() => {pressHandlerKidevDamisxiR(); hapticForStart()}}><Text style={styles.buttonText}>თამაშის დაწყება</Text></TouchableOpacity>
          </View> 
           
          <View style={styles.restrictionContainer}>

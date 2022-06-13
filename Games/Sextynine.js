@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { View, Image, ImageBackground, TouchableOpacity, StyleSheet } from 'react-native';
 import { randomImages } from '../utilities/Randomizer';
 import { styles } from '../Components/stylesForCards';
+import * as Haptics from 'expo-haptics';
 
 
 export default function Sextynine() {
-
+  
   const [cardsData, setCardsData] = useState([
     { image: require('../assets/photos/test4.jpg'), id: 1 },
     { image: require('../assets/photos/test7.jpg'), id: 2 },
@@ -18,10 +19,16 @@ export default function Sextynine() {
 
   const onPressF = (image) => {
     setCardsData((prevImage) => {
-      
       return prevImage.filter(img => img.image != image);
     })
-    
+  }
+
+  const  hapticSuccess = () => {
+    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success)
+  }
+
+  const  hapticError = () => {
+    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error)
   }
 
 
@@ -32,11 +39,11 @@ export default function Sextynine() {
           <Image source={randomImages(cardsData).image} style={styles.cardsFromData} />
         </View>
       <View style={style.viewBtn}> 
-          <TouchableOpacity onPress={() => onPressF(setCardsData.image)} > 
+          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticError()}} > 
               <Image source={require('../assets/photos/forbidden.png')} style={style.forbiddenBtn}/>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => onPressF(setCardsData.image)}>
+          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticSuccess()}}>
               <Image source={require('../assets/photos/beer.png')} style={style.beerBtn}/>
           </TouchableOpacity>
       </View> 
