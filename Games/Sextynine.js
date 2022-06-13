@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Image, ImageBackground, TouchableOpacity, StyleSheet } from 'react-native';
 import { randomImages } from '../utilities/Randomizer';
 import { styles } from '../Components/stylesForCards';
 import * as Haptics from 'expo-haptics';
+import { Audio } from 'expo-av';
 
 
 export default function Sextynine() {
@@ -16,6 +17,31 @@ export default function Sextynine() {
     { image: require('../assets/photos/test5.jpg'), id: 6 },
     { image: require('../assets/photos/test6.jpg'), id: 7 },
   ]);
+
+    const notificationSrc = require("../assets/audio/card.mp3")
+    const notification = require("../assets/audio/audio2.mp3")
+    const [currentSound, setSound] = useState();
+
+    const playSound = React.useCallback(async() => {
+      const { sound } = await Audio.Sound.createAsync(notificationSrc);
+      setSound(sound);
+      await sound.playAsync(); 
+    }, []);
+
+    useEffect(() => {
+      return currentSound ? () => currentSound.unloadAsync() : undefined;
+    }, [currentSound]);
+
+    
+    const playSound2 = React.useCallback(async() => {
+      const { sound } = await Audio.Sound.createAsync(notification);
+      setSound(sound);
+      await sound.playAsync(); 
+    }, []);
+
+    useEffect(() => {
+      return currentSound ? () => currentSound.unloadAsync() : undefined;
+    }, [currentSound]);
 
   const onPressF = (image) => {
     setCardsData((prevImage) => {
@@ -39,11 +65,11 @@ export default function Sextynine() {
           <Image source={randomImages(cardsData).image} style={styles.cardsFromData} />
         </View>
       <View style={style.viewBtn}> 
-          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticError()}} > 
+          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticError(); playSound2()}} > 
               <Image source={require('../assets/photos/forbidden.png')} style={style.forbiddenBtn}/>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticSuccess()}}>
+          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticSuccess(); playSound()}}>
               <Image source={require('../assets/photos/beer.png')} style={style.beerBtn}/>
           </TouchableOpacity>
       </View> 

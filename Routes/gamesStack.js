@@ -34,7 +34,7 @@ const screens = {
             headerTransparent: true,
             headerTintColor: 'white',
             title: 'თამაშები',
-            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 28, letterSpacing: 1},
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 30, letterSpacing: 1, marginTop: 5},
             headerBackTitle: (() => null)
             
         }
