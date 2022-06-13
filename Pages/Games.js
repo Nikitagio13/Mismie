@@ -46,32 +46,44 @@ return (
                 <View style={styles.container}>
 
                         <TouchableOpacity onPress={() => {pressHandlerSextynineRules(); hapticsM()}}>
-                                <Image source={require("../assets/photos/69.png")} style={styles.gameicon} />
+                                <View style={styles.contForImg}>
+                                        <Image source={require("../assets/photos/69.png")} style={styles.gameicon} />
+                                </View>
                                 <Text style={styles.gameName}>სექსთინაინ</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={() => {pressHandlerDamisxiRules(); hapticsM()}}>
-                                <Image source={require("../assets/photos/damisxi1.jpg")} style={styles.gameicon} />
+                                <View style={styles.contForImg}>
+                                        <Image source={require("../assets/photos/damisxi1.jpg")} style={styles.gameicon} />
+                                </View>
                                 <Text style={styles.gameName}>დამისხი დამალევინე</Text>
                         </TouchableOpacity>
                         
                         <TouchableOpacity onPress={() => {pressHandlerIsevDamisxiRules(); hapticsM()}}>
-                                <Image source={require('../assets/photos/isevDamisxi.png')} style={styles.gameicon} />
+                                <View style={styles.contForImg}>
+                                        <Image source={require('../assets/photos/isevDamisxi.png')} style={styles.gameicon} />
+                                </View>
                                 <Text style={styles.gameName}>ისევ დამისხი</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={() => {pressHandlerIgrialeRules(); hapticsM()}}>
-                                <Image source={require("../assets/photos/igriale.png")} style={styles.gameicon} />
+                                <View style={styles.contForImg}>
+                                        <Image source={require("../assets/photos/igriale.png")} style={styles.gameicon} />
+                                </View>
                                 <Text style={styles.gameName}>იგრიალე ოქრო</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={() => {pressHandlerDampluriRules(); hapticsM()}}>
-                                <Image source={require("../assets/photos/dampluri.png")} style={styles.gameicon} />
+                                <View style={styles.contForImg}>
+                                        <Image source={require("../assets/photos/dampluri.png")} style={styles.gameicon} />
+                                </View>
                                 <Text style={styles.gameName}>დამპლური თამაშები</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={() =>{pressHandlerKidevDamisxiRules(); hapticsM()}}>
-                                <Image source={require("../assets/photos/mismie.jpg")} style={styles.gameicon} />
+                                <View style={styles.contForImg}>
+                                        <Image source={require("../assets/photos/mismie.jpg")} style={styles.gameicon} />
+                                </View>
                                 <Text style={styles.gameName}>კიდევ დამისხი</Text>
                         </TouchableOpacity>
 
@@ -89,8 +101,10 @@ return (
 )
   }
 
-const styles = StyleSheet.create({
 
+  
+
+const styles = StyleSheet.create({
 
   scrollview: {
     flex: 1,
@@ -104,15 +118,25 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       flexWrap: 'wrap',
       marginTop: 140,
-      marginBottom: 40,
-      marginHorizontal: 45,
+      marginBottom: 45,
+      marginHorizontal: 36,
       
   },
+  contForImg: {
+       shadowColor: '#3e403e',
+       shadowOpacity: 0.7,
+       shadowOffset: {
+         width: 0,
+         height: 0,
+       },
+       shadowRadius: 12,
+},
   gameicon: {
        width: 120,
        height: 120,
        borderRadius: 15,
-       marginBottom: 120
+       marginBottom: 115,
+  
   },
   gameName: {
       fontFamily: 'alk_life',
@@ -149,7 +173,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderRadius:30,
   },
-
   bonusCardsWrap: {
           justifyContent: 'center',
           alignItems: 'center',
