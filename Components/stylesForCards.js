@@ -12,18 +12,19 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
       width: '100%',
       shadowColor: 'black',
-      shadowOpacity: .5,
+      shadowOpacity: 1,
       shadowOffset: {
         width: 0,
         height: 0,
       },
       shadowRadius: 12,
-      marginTop: 80
+      marginTop: 60
     },
     image: {
       flex: 1,
       justifyContent: "center",
       height: 1000,
+      marginLeft: -600
     },
     cardsFromData: {
       display: 'flex',
@@ -44,10 +45,11 @@ export const styles = StyleSheet.create({
       marginTop: 240,
       marginHorizontal: "22%",
       fontSize: 20,
-      fontWeight: "bold"
+      fontWeight: "bold",
+      color: "#272727"
     },
     textSizeFacebook: {
-      color: "#4267B2"
+      color: "#4267B2",
     },
 
     //FOR BEER AND X BUTTON
@@ -56,6 +58,7 @@ export const styles = StyleSheet.create({
       flexDirection: "row",
       justifyContent: "space-around",
       alignContent: "center",
+      marginTop: -8
     },
     beerBtn: {
       height: 85,
