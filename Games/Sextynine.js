@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Image, ImageBackground, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import { randomImages } from '../utilities/Randomizer';
 import { styles } from '../Components/stylesForCards';
 import * as Haptics from 'expo-haptics';
@@ -64,13 +64,13 @@ export default function Sextynine() {
         <View style={styles.cardImages}>
           <Image source={randomImages(cardsData).image} style={styles.cardsFromData} />
         </View>
-      <View style={style.viewBtn}> 
-          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticError(); playSound2()}} > 
-              <Image source={require('../assets/photos/forbidden.png')} style={style.forbiddenBtn}/>
+      <View style={styles.viewBtn}> 
+          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticError(); playSound()}} > 
+              <Image source={require('../assets/photos/forbidden.png')} style={styles.forbiddenBtn}/>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticSuccess(); playSound()}}>
-              <Image source={require('../assets/photos/beer.png')} style={style.beerBtn}/>
+          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticSuccess(); playSound2()}}> 
+              <Image source={require('../assets/photos/beer.png')} style={styles.beerBtn}/>
           </TouchableOpacity>
       </View> 
     </View>
@@ -79,23 +79,7 @@ export default function Sextynine() {
 
 
 
-const style = StyleSheet.create({
-  viewBtn: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignContent: "center",
-    marginTop: 30
-  },
-  beerBtn: {
-    height: 85,
-    width: 85,
-  },
-  forbiddenBtn: {
-    height: 85,
-    width: 85,
-  }
-})
+
 
 
 

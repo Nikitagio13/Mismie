@@ -11,20 +11,17 @@ export default function BonusCards() {
   )
 }
 
-const styles = StyleSheet.create({
-        gamesview: {
-            backgroundColor: 'purple',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flex: 1
-        },
-        gamestext: {
-            color: 'white',
-            width: "100%",
-            
-        }
-    }
-)
 
+const styles = StyleSheet.create({
+  gamesview: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1
+},
+gamestext: {
+    color: 'white',
+    width: "100%",
+},
+})
 
 

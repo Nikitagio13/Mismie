@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { Text, View, TouchableOpacity, Image } from 'react-native';
+import { styles } from '../Components/stylesForCards';
 import * as Haptics from 'expo-haptics';
 
 
@@ -30,7 +31,9 @@ export default function IgrialeRules({ navigation }) {
                         Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
                         vel illum qui dolorem eum fugiat quo voluptas nulla pariatur! DDD
                 </Text>
+                <View style={styles.buttonViewCont}>
                 <TouchableOpacity style={styles.button} onPress={() => {pressHandlerIgrialeR(); hapticForStart()}}><Text style={styles.buttonText}>თამაშის დაწყება</Text></TouchableOpacity>
+                </View>
          </View> 
           
          <View style={styles.restrictionContainer}>
@@ -42,63 +45,6 @@ export default function IgrialeRules({ navigation }) {
   )
 }
 
-const styles = StyleSheet.create({
-        
-        gamesView: {
-            backgroundColor: '#CE63AB',
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            paddingHorizontal: 38,
-        },
-        mainContainer: {
-            position: "relative",
-            top: 60
-        },
-        gamesText: {
-            color: 'white',
-            fontSize: 14.5,
-            textAlign: "justify"
-        },
-        button: {
-            backgroundColor:"#5325",
-            paddingVertical: 12,
-            paddingHorizontal: 30,
-            width: 300,
-            alignItems: 'center',
-            position: 'relative',
-            top: 55,
-            marginTop: 16,
-            borderRadius:30,
-          
-        },
-          buttonText: {
-            color:"#FFC300",
-            fontSize: 24.5,
-            fontFamily: 'alk_life',
-            textAlign: "center"
-        },
-         restrictionContainer: {
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-around",
-            alignContent: "center",
-            position:'relative',
-            top: 185,
-            right: 14
-         },
-          restriction: {
-            width: 60,
-            height: 60,
-        },
-        restriction2: {
-            width: 190,
-            height: 190,
-            position: "relative",
-            bottom: 65
-        }
-    }
-)
 
 
 

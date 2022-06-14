@@ -1,11 +1,12 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View } from 'react-native';
+import { styles } from '../Components/stylesForCards';
 
 export default function About() {
   return (
 
-    <View style={styles.gamesview}>
-        <Text style={styles.gamestext}>
+    <View style={styles.gamesviewAbout}>
+        <Text style={styles.gamestextAbout}>
           Sed ut perspiciatis unde omnis iste natus
           error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
           eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta 
@@ -21,22 +22,6 @@ export default function About() {
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-        gamesview: {
-            backgroundColor: 'purple',
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            paddingHorizontal: 30,
-        },
-        gamestext: {
-            color: 'white',
-            textAlign: "justify"
-            
-        }
-    }
-)
 
 
 

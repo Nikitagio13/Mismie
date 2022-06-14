@@ -3,10 +3,10 @@ import { StatusBar, Image, Animated, Text, View, Dimensions, StyleSheet, Touchab
 const { width } = Dimensions.get('screen');
 
 const data = [
-    {image: require('../assets/photos/test4.jpg'), title: 'დამისხი დამალევინე', price: '15 ₾'},
-    {image: require('../assets/photos/test7.jpg'), title: 'დამპლური თამაშები', price: '10 ₾'},
-    {image: require('../assets/photos/test.jpg'), title: 'სექსთინაინ', price: '12 ₾'},
-    {image: require('../assets/photos/test2.jpg'), title: 'იგრიალე ოქრო', price: '17 ₾'},
+    {image: require('../assets/photos/bck-damisxi1.png'), title: 'დამისხი დამალევინე', price: '15 ₾'},
+    {image: require('../assets/photos/bck-sextynine.png'), title: 'სექსთინაინ', price: '10 ₾'},
+    {image: require('../assets/photos/bck-igriale.png'), title: 'იგრიალე ოქრო', price: '12 ₾'},
+    {image: require('../assets/photos/bck-damisxi2.png'), title: 'კიდევ დამისხი დამალევინე', price: '17 ₾'},
     {image: require('../assets/photos/test3.jpg'), title: 'დამისხი დამალევინე', price: '25 ₾'},
     {image: require('../assets/photos/test5.jpg'), title: 'ისევ დამისხი დამალევინე', price: '8 ₾'},
     {image: require('../assets/photos/test6.jpg'), title: 'კიდევ დამისხი დამალევინე', price: '9.5 ₾'},
@@ -15,7 +15,7 @@ const data = [
 
 
 
-const imageW = width * 0.7;
+const imageW = width * 0.75;
 const imageH = imageW * 1.54;
 
 export default function ImgData(){
@@ -73,7 +73,7 @@ export default function ImgData(){
                                 <Image source={item.image} style={{
                                     width: imageW,
                                     height: imageH,
-                                    resizeMode: 'cover',
+                                    resizeMode: 'stretch',
                                     borderRadius: 16,
                                     marginTop: 45,
                                 }}/>

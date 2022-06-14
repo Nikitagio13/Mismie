@@ -4,6 +4,8 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
 
 
+
+//FOR CARDS
     cardImages: {
       display: 'flex',
       justifyContent: 'center',
@@ -16,30 +18,177 @@ export const styles = StyleSheet.create({
         height: 0,
       },
       shadowRadius: 12,
-      marginTop: 110
+      marginTop: 80
     },
-  
-    card: {
-      width: '85%',
-      height: '93%',
-      borderRadius: 15,
-    },
-  
     image: {
       flex: 1,
       justifyContent: "center",
       height: 1000,
     },
-  
     cardsFromData: {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
       width: "85%",
-      height: 550,
+      height: "86%",
       borderRadius: 10,
-      
-    }
+      resizeMode: "stretch"
+    },
+    textSize: {
+      display: "flex",
+      position: "absolute",
+      justifyContent: "center",
+      alignItems: "center",
+      textAlign: "center",
+      width: "55%",
+      marginTop: 240,
+      marginHorizontal: "22%",
+      fontSize: 20,
+      fontWeight: "bold"
+    },
+    textSizeFacebook: {
+      color: "#4267B2"
+    },
+
+    //FOR BEER AND X BUTTON
+    viewBtn: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-around",
+      alignContent: "center",
+    },
+    beerBtn: {
+      height: 85,
+      width: 85,
+    },
+    forbiddenBtn: {
+      height: 85,
+      width: 85,
+    },
+
+
+
+    //FOR RULES PAGE
+    gamesView: {
+      backgroundColor: '#CE63AB',
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingHorizontal: 35,
+  },
+  mainContainer: {
+      position: "relative",
+      top: 60,
+  },
+  gamesText: {
+      color: 'white',
+      fontSize: 14.5,
+      textAlign: "justify",
+  },
+  button: {
+      backgroundColor:"#5325",
+      paddingVertical: 12,
+      width: 300,
+      position: 'relative',
+      top: 65,
+      borderRadius:30,
+  },
+  buttonViewCont: {
+    display: "flex",
+    alignItems: 'center',
+    justifyContent: "center",
+  },
+    buttonText: {
+      color:"#FFC300",
+      fontSize: 24.5,
+      fontFamily: 'alk_life',
+      textAlign: "center"
+  },
+   restrictionContainer: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-around",
+      alignContent: "center",
+      position:'relative',
+      top: 190,
+      right: 14
+   },
+    restriction: {
+      width: 60,
+      height: 60,
+  },
+  restriction2: {
+      width: 190,
+      height: 190,
+      position: "relative",
+      bottom: 65
+  },
+
+
+
+//FOR ABOUT PAGE
+gamesviewAbout: {
+  backgroundColor: 'purple',
+  flex: 1,
+  alignItems: 'center',
+  justifyContent: 'center',
+  paddingHorizontal: 30,
+},
+gamestextAbout: {
+  color: 'white',
+  textAlign: "justify"
+},
+
+
+
+//FOR HOME PAGE
+containerH: {
+  flex: 1,
+  backgroundColor: '#CE63AB',
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+subtitleH: {
+  color: '#FFC5EC',
+  position: 'relative',
+  bottom: 230,
+  fontSize:  18,
+  fontFamily: 'alk_life',
+},
+homePageImages: {
+  display: 'flex',
+  flexDirection: 'row', 
+  justifyContent: 'center',
+  alignItems:'center', 
+  position: 'relative',
+  top: 600,
+},
+homePageImage1: {
+  width: 60, 
+  height: 60,
+  marginRight: 30
+},
+homePageImage2: {
+  width: 60, 
+  height: 60,
+},
+buttonH: {
+  backgroundColor:"#5325",
+  paddingVertical: 12,
+  paddingHorizontal: 30,
+  width: 270,
+  alignItems: 'center',
+  position: 'relative',
+  top: 15,
+  marginTop: 16,
+  borderRadius:30,
+},
+buttonTextH: {
+  color:"#FFC300",
+  fontSize: 24.5,
+  fontFamily: 'alk_life',
+  textAlign: "center"
+},
   
   
      }

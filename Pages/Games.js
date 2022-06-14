@@ -2,6 +2,7 @@ import React  from 'react'
 import { Image, StyleSheet, View, TouchableOpacity, Text, ScrollView } from 'react-native';
 import * as Haptics from 'expo-haptics';
 
+
 export default function Games({ navigation }) {
 
 
@@ -102,85 +103,73 @@ return (
   }
 
 
-  
-
-const styles = StyleSheet.create({
-
-  scrollview: {
-    flex: 1,
-    backgroundColor: '#CE63AB', 
-    
-  },
-  container: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      marginTop: 140,
-      marginBottom: 45,
-      marginHorizontal: 36,
-      
-  },
-  contForImg: {
-       shadowColor: '#3e403e',
-       shadowOpacity: 0.7,
-       shadowOffset: {
-         width: 0,
-         height: 0,
-       },
-       shadowRadius: 12,
-},
-  gameicon: {
-       width: 120,
-       height: 120,
-       borderRadius: 15,
-       marginBottom: 115,
-  
-  },
-  gameName: {
-      fontFamily: 'alk_life',
-      fontSize: 21,
-      position: 'absolute',
-      right: -20,
-      top: 130,
-      width: 160,
-      color: '#72000F',
-      textAlign: 'center',
-  },
-
-  bonusCards: {
-        width: 90,
-        height: 90,
-        marginTop: 20,
-        
-  },
-
-  bonusCardsTxt: {
-        color: '#FFF',
-        fontSize: 19,
-        fontWeight: 'bold',
-        marginTop: 7,
-        paddingBottom: 10,
-  },
-
-  bonusCardsTouchable: {
-        backgroundColor:"#5325",
-        paddingVertical: 11,
-        paddingHorizontal: 30,
-        width: 260,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius:30,
-  },
-  bonusCardsWrap: {
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginTop: -40,
-          paddingBottom: 70
-          
-  }
-
-  
-})
+  const styles = StyleSheet.create({
+        scrollview: {
+                flex: 1,
+                backgroundColor: '#CE63AB', 
+              },
+              container: {
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  flexDirection: 'row',
+                  flexWrap: 'wrap',
+                  marginTop: 140,
+                  marginBottom: 45,
+                  marginHorizontal: 36,
+                  
+              },
+              contForImg: {
+                   shadowColor: '#3e403e',
+                   shadowOpacity: 0.7,
+                   shadowOffset: {
+                     width: 0,
+                     height: 0,
+                   },
+                   shadowRadius: 12,
+              },
+              gameicon: {
+                   width: 120,
+                   height: 120,
+                   borderRadius: 15,
+                   marginBottom: 115,
+              },
+              gameName: {
+                  fontFamily: 'alk_life',
+                  fontSize: 21,
+                  position: 'absolute',
+                  right: -20,
+                  top: 130,
+                  width: 160,
+                  color: '#72000F',
+                  textAlign: 'center',
+              },
+              bonusCards: {
+                    width: 90,
+                    height: 90,
+                    marginTop: 20,
+              },
+              bonusCardsTxt: {
+                    color: '#FFF',
+                    fontSize: 19,
+                    fontWeight: 'bold',
+                    marginTop: 7,
+                    paddingBottom: 10,
+              },
+              bonusCardsTouchable: {
+                    backgroundColor:"#5325",
+                    paddingVertical: 11,
+                    paddingHorizontal: 30,
+                    width: 260,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    borderRadius:30,
+              },
+              bonusCardsWrap: {
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginTop: -40,
+                      paddingBottom: 70      
+              },
+  })
 
