@@ -18,18 +18,10 @@ export default function DampluriRules({ navigation }) {
 
     <View style={styles.gamesView}>
        <View style={styles.mainContainer}>
-                <Text style={styles.gamesText}>
-                        Sed ut perspiciatis unde omnis iste natus
-                        error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta 
-                        sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut 
-                        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem 
-                        sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, 
-                        consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore 
-                        et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum 
-                        exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-                        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
-                        vel illum qui dolorem eum fugiat quo voluptas nulla pariatur! DDD
+                <Text style={styles.gamesTextForRulesPage}>
+                        <Text style={styles.gamesTextRPDampluri}>ზნეობას და მორალს მოკლებული თამაში. ეცადეთ არ ინანოთ, რომ ის შეიძინეთ.</Text>{'\n'}{'\n'}{'\n'}
+                        რიგ-რიგობით იღებთ ბარეთებს, ხმამაღლა კითხულობთ ტექსტებს და იშვერთ თითებს სასურველი მოთამაშისკენ. ყოველ ჯერზე სვამს ის, ვისკენაც ყველაზე მეტ თითს გაიშვერენ და ისინიც, ვინც არავისკენ გაიშვერენ თითს.
+                        {'\n'}{'\n'}ნურაფერი გეწყინებათ, ეს მხოლოდ ალბათობაა.
                 </Text>
                 <TouchableOpacity style={styles.button} onPress={() => {pressHandlerDampluriR(); hapticForStart()}}><Text style={styles.buttonText}>თამაშის დაწყება</Text></TouchableOpacity>
          </View> 

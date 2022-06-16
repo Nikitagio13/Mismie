@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { View, Image, ImageBackground, TouchableOpacity } from 'react-native';
-import { randomImages } from '../utilities/Randomizer';
+import { View, Image, ImageBackground, TouchableOpacity, Text } from 'react-native';
+import { randomImages, randomTexts } from '../utilities/Randomizer';
 import { styles } from '../Components/stylesForCards';
 import * as Haptics from 'expo-haptics';
 import { Audio } from 'expo-av';
@@ -9,14 +9,17 @@ import { Audio } from 'expo-av';
 export default function Sextynine() {
   
   const [cardsData, setCardsData] = useState([
-    { image: require('../assets/photos/test4.jpg'), id: 1 },
-    { image: require('../assets/photos/test7.jpg'), id: 2 },
-    { image: require('../assets/photos/test.jpg'), id: 3 },
-    { image: require('../assets/photos/test2.jpg'), id: 4 },
-    { image: require('../assets/photos/test3.jpg'), id: 5 },
-    { image: require('../assets/photos/test5.jpg'), id: 6 },
-    { image: require('../assets/photos/test6.jpg'), id: 7 },
+    { image: require('../assets/photos/bck-sextynine.png') },
+
   ]);
+
+
+    const texts = [
+      {text: `ერთ ხელში დაიჭირეთ სასმისი, რომლითაც დალევთ. მეორე ხელით ერთმანეთს შეეხეთ რომელიმე ინტიმურ ადგილზე.${'\n'}${'\n'} თუ რომელიმე თქვენგანი უარს იტყვის, სვამთ სამჯერ.`},
+      {text: `ინტიმურად აკოცეთ ერთმანეთს ყურის მიდამოებში.${'\n'}${'\n'} ვინც უფრო მალე დანებდება სვამს სამჯერ.`},
+      {text: `დაამყარეთ პირადი რეკორდი. აკოცეთ ერთმანეთს ტუჩებში იმდენ ხანს, რამდენ ხანსაც ჯერ არასდროს გიკოცნიათ.${'\n'}${'\n'} ვინც უარს იტყვის, სვამს ოთხჯერ.`}
+    ]
+
 
     const notificationSrc = require("../assets/audio/card.mp3")
     const notification = require("../assets/audio/audio2.mp3")
@@ -60,16 +63,17 @@ export default function Sextynine() {
 
   return (
     <View>
-      <ImageBackground source={require('../assets/photos/backgroundcolors.jpg')} style={styles.image} />
-        <View style={styles.cardImages}>
+      <ImageBackground source={require('../assets/photos/backgroundcolorspurple.jpg')} style={styles.image} />
+        <View style={styles.cardImagesSxt}>
           <Image source={randomImages(cardsData).image} style={styles.cardsFromData} />
+          <Text style={styles.textForSextynine}>{randomTexts(texts).text}</Text>
         </View>
       <View style={styles.viewBtn}> 
-          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticError(); playSound()}} > 
+          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticError();}} > 
               <Image source={require('../assets/photos/forbidden.png')} style={styles.forbiddenBtn}/>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticSuccess(); playSound2()}}> 
+          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticSuccess();}}> 
               <Image source={require('../assets/photos/beer.png')} style={styles.beerBtn}/>
           </TouchableOpacity>
       </View> 

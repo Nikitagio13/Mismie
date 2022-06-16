@@ -3,12 +3,12 @@ import { StatusBar, Image, Animated, Text, View, Dimensions, StyleSheet, Touchab
 const { width } = Dimensions.get('screen');
 
 const data = [
-    {image: require('../assets/photos/bck-damisxi1.png'), title: 'დამისხი დამალევინე', price: '15 ₾'},
-    {image: require('../assets/photos/bck-sextynine.png'), title: 'სექსთინაინ', price: '10 ₾'},
+    {image: require('../assets/photos/lurji.jpg'), title: 'დამისხი დამალევინე', price: '18 ₾'},
+    {image: require('../assets/photos/sxtnn.jpg'), title: 'სექსთინაინ', price: '10 ₾'},
     {image: require('../assets/photos/bck-igriale.png'), title: 'იგრიალე ოქრო', price: '12 ₾'},
-    {image: require('../assets/photos/bck-damisxi2.png'), title: 'კიდევ დამისხი დამალევინე', price: '17 ₾'},
-    {image: require('../assets/photos/test3.jpg'), title: 'დამისხი დამალევინე', price: '25 ₾'},
-    {image: require('../assets/photos/test5.jpg'), title: 'ისევ დამისხი დამალევინე', price: '8 ₾'},
+    {image: require('../assets/photos/stafilosferi.jpg'), title: 'ისევ დამისხი დამალევინე', price: '17 ₾'},
+    {image: require('../assets/photos/mwvane.jpg'), title: 'კიდევ დამისხი დამალევინე', price: '25 ₾'},
+    {image: require('../assets/photos/dmplr.jpg'), title: 'დამისხი დამალევინე', price: '8 ₾'},
     {image: require('../assets/photos/test6.jpg'), title: 'კიდევ დამისხი დამალევინე', price: '9.5 ₾'},
 
 ];

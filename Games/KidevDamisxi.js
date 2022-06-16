@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { View, Image, ImageBackground, TouchableOpacity } from 'react-native';
-import { randomImages } from '../utilities/Randomizer';
+import { View, Image, ImageBackground, TouchableOpacity, Text } from 'react-native';
+import { randomImages, randomTexts } from '../utilities/Randomizer';
 import { styles } from '../Components/stylesForCards';
 import * as Haptics from 'expo-haptics';
 import { Audio } from 'expo-av';
@@ -9,13 +9,7 @@ import { Audio } from 'expo-av';
 export default function KidevDamisxi() {
 
   const [cardsData, setCardsData] = useState([
-    { image: require('../assets/photos/test4.jpg'), id: 1 },
-    { image: require('../assets/photos/test7.jpg'), id: 2 },
-    { image: require('../assets/photos/test.jpg'), id: 3 },
-    { image: require('../assets/photos/test2.jpg'), id: 4 },
-    { image: require('../assets/photos/test3.jpg'), id: 5 },
-    { image: require('../assets/photos/test5.jpg'), id: 6 },
-    { image: require('../assets/photos/test6.jpg'), id: 7 },
+    { image: require('../assets/photos/test4.jpg') },
   ]);
 
     const notificationSrc = require("../assets/audio/card.mp3")

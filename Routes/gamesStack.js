@@ -65,7 +65,7 @@ const screens = {
         navigationOptions: {
             title: 'სექსთინაინ',
             headerTransparent: true,
-            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
+            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 25, letterSpacing: 1},
             headerTintColor: 'white',
         
             headerBackTitle: (() => null),
@@ -78,8 +78,8 @@ const screens = {
         navigationOptions: {
             title: 'დამისხი დამალევინე',
             headerTransparent: true,
-            headerTintColor: 'white',
-            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 20, letterSpacing: 1},
+            headerTintColor: 'black',
+            headerTitleStyle: {color: 'black', fontFamily: 'alk_life', fontSize: 20, letterSpacing: 1},
             headerBackTitle: (() => null)
         }
     },
@@ -122,8 +122,8 @@ const screens = {
         navigationOptions: {
             title: 'იგრიალე ოქრო',
             headerTransparent: true,
-            headerTintColor: 'white',
-            headerTitleStyle: {color: 'white', fontFamily: 'alk_life', fontSize: 22, letterSpacing: 1},
+            headerTintColor: 'black',
+            headerTitleStyle: {color: 'black', fontFamily: 'alk_life', fontSize: 25, letterSpacing: 1},
             headerBackTitle: (() => null)
         }
     },

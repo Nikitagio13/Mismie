@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { View, Image, ImageBackground, TouchableOpacity } from 'react-native';
-import { randomImages } from '../utilities/Randomizer';
+import { View, Image, ImageBackground, TouchableOpacity, Text } from 'react-native';
+import { randomImages, randomTexts } from '../utilities/Randomizer';
 import { styles } from '../Components/stylesForCards';
 import * as Haptics from 'expo-haptics';
 import { Audio } from 'expo-av';
@@ -9,14 +9,16 @@ import { Audio } from 'expo-av';
 export default function Damisxi() {
 
   const [cardsData, setCardsData] = useState([
-    { image: require('../assets/photos/test4.jpg'), id: 1 },
-    { image: require('../assets/photos/test7.jpg'), id: 2 },
-    { image: require('../assets/photos/test.jpg'), id: 3 },
-    { image: require('../assets/photos/test2.jpg'), id: 4 },
-    { image: require('../assets/photos/test3.jpg'), id: 5 },
-    { image: require('../assets/photos/test5.jpg'), id: 6 },
-    { image: require('../assets/photos/test6.jpg'), id: 7 },
+    { image: require('../assets/photos/bck-damisxi2.png') },
   ]);
+
+
+  const texts = [
+    {text: `ყველამ ააგდეთ თითო SNACK და პირით დაიჭირეთ ჰაერში.${'\n'}${'\n'} ვისაც არ გამოუვა, სვამს.`},
+    {text: `რომელიმე ბიჭს შეუტყუპეთ ძუძუები და ფოტო ახლოდან ისე გადაუღეთ, რომ ჩანდეს მხოლოდ დეკოლტე. გაუგზავნეთ ეს ფოტო მის რომელიმე FACEBOOK FRIEND-ს და დაელოდეთ რეაქციას.${'\n'}${'\n'} უარის შემთხვევაში სვამს სამჯერ.`},
+    {text: `ტირიონ ლანისტერი${'\n'}${'\n'} შემოუარე მაგიდას მუხლებით და ასე დალიე ორჯერ.`},
+    {text: `დაურეკე ვინმეს და სრული სერიოზულობით მიულოცე პოლიკარპე მართალის ხსენების დღე. თუ დაიჯერებს და ისიც მოგილოცავთ, აირიდეთ დალევა.${'\n'}${'\n'} თუ მიგიხვდება, დალიე ორჯერ.`}
+  ]
 
     const notificationSrc = require("../assets/audio/card.mp3")
     const notification = require("../assets/audio/audio2.mp3")
@@ -60,18 +62,19 @@ export default function Damisxi() {
 
   return (
     <View>
-      <ImageBackground source={require('../assets/photos/backgroundcolors.jpg')} style={styles.image} />
+      <ImageBackground source={require('../assets/photos/backgroundcolorsblue.jpg')} style={styles.image} />
       
         <View style={styles.cardImages}>
           <Image source={randomImages(cardsData).image} style={styles.cardsFromData} />
+          <Text style={styles.textForDamisxiz}>{randomTexts(texts).text}</Text>
         </View>
         
         <View style={styles.viewBtn}> 
-          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticError(); playSound()}} > 
+          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticError(); }} > 
               <Image source={require('../assets/photos/forbidden.png')} style={styles.forbiddenBtn}/>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticSuccess(); playSound2()}}>
+          <TouchableOpacity onPress={() => {onPressF(setCardsData.image); hapticSuccess(); }}>
               <Image source={require('../assets/photos/beer.png')} style={styles.beerBtn}/>
           </TouchableOpacity>
       </View> 

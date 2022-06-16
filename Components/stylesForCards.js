@@ -35,22 +35,6 @@ export const styles = StyleSheet.create({
       borderRadius: 10,
       resizeMode: "stretch"
     },
-    textSize: {
-      display: "flex",
-      position: "absolute",
-      justifyContent: "center",
-      alignItems: "center",
-      textAlign: "center",
-      width: "55%",
-      marginTop: 240,
-      marginHorizontal: "22%",
-      fontSize: 20,
-      fontWeight: "bold",
-      color: "#272727"
-    },
-    textSizeFacebook: {
-      color: "#4267B2",
-    },
 
     //FOR BEER AND X BUTTON
     viewBtn: {
@@ -69,6 +53,102 @@ export const styles = StyleSheet.create({
       width: 85,
     },
 
+    
+    //TEXTS FOR GAMES
+    textForSextynine: {
+      display: "flex",
+      position: "absolute",
+      justifyContent: "center",
+      alignItems: "center",
+      textAlign: "center",
+      width: "55%",
+      marginTop: 240,
+      marginHorizontal: "22%",
+      fontSize: 20,
+      fontWeight: "bold",
+      color: "#ff9d00",
+      shadowColor: '#ff2b00',
+      shadowOpacity: 1,
+      shadowOffset: {
+        width: 0,
+        height: 0,
+      },
+      shadowRadius: 10,
+    },
+    cardImagesSxt: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%',
+      shadowColor: '#d96cb1',
+      shadowOpacity: .8,
+      shadowOffset: {
+        width: 0,
+        height: 0,
+      },
+      shadowRadius: 12,
+      marginTop: 60
+    },
+    image: {
+      flex: 1,
+      justifyContent: "center",
+      height: 1000,
+      marginLeft: -600
+    },
+
+    textForDamisxiz: {
+      display: "flex",
+      position: "absolute",
+      justifyContent: "center",
+      alignItems: "center",
+      textAlign: "center",
+      width: "55%",
+      marginTop: 240,
+      marginHorizontal: "22%",
+      fontSize: 20,
+      fontWeight: "bold",
+      color: "#272727"
+    },
+    
+
+    textForIgriale: {
+      display: "flex",
+      position: "absolute",
+      justifyContent: "center",
+      alignItems: "center",
+      textAlign: "center",
+      width: "55%",
+      marginTop: 240,
+      marginHorizontal: "22%",
+      fontSize: 20,
+      fontWeight: "bold",
+      color: "#2a803a",
+      shadowColor: '#fff',
+      shadowOpacity: 1,
+      shadowOffset: {
+        width: 0,
+        height: 0,
+      },
+      shadowRadius: 2,
+    },
+ 
+    
+//TEXT FOR GAME'S RULES
+gamesTextForRulesPage: {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  textAlign: "center",
+  color: "white",
+  fontSize: 18,
+  fontWeight: "bold"
+},
+
+gamesTextRPDampluri: {
+  fontSize: 22,
+  fontWeight: "bold",
+  color: "#fff"
+},
 
 
     //FOR RULES PAGE
