@@ -1,7 +1,7 @@
-import React from 'react';
-import { Image } from 'react-native';
-import shorthash from 'shorthash';
-import * as FileSystem from 'expo-file-system';
+import React from "react";
+import { Image } from "react-native";
+import shorthash from "shorthash";
+import * as FileSystem from "expo-file-system";
 
 export default class CacheImage extends React.Component {
   state = {
@@ -11,11 +11,10 @@ export default class CacheImage extends React.Component {
   componentDidMount = async () => {
     const { uri } = this.props;
     const name = shorthash.unique(uri);
-    
+
     const path = `${FileSystem.cacheDirectory}${name}`;
     const image = await FileSystem.getInfoAsync(path);
     if (image.exists) {
-      
       this.setState({
         source: {
           uri: image.uri,
@@ -24,7 +23,6 @@ export default class CacheImage extends React.Component {
       return;
     }
 
-    
     const newImage = await FileSystem.downloadAsync(uri, path);
     this.setState({
       source: {
